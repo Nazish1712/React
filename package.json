@@ -1,0 +1,31 @@
+{
+    "name": "react",
+    "version": "1.0.0",
+    "description": "This is react course for learning",
+    "scripts": {
+        "start" : "parcel index.html",
+        "build" : "parcel build index.html",
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Nazish1712/React.git"
+    },
+    "keywords": [],
+    "author": "nazish",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Nazish1712/React/issues"
+    },
+    "homepage": "https://github.com/Nazish1712/React#readme",
+    "devDependencies": {
+        "parcel": "^2.16.3"
+    },
+    "dependencies": {
+        "react": "^19.2.3",
+        "react-dom": "^19.2.3"
+    },
+    "browserslist" : [
+        "last 2 versions"
+    ]
+}
