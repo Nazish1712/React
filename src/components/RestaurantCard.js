@@ -3,7 +3,7 @@ import {RES_PIC_URL} from "../utils/constants"
 const RestaurantCard = (props) =>{
     const{resData} = props;
 
-    const {name, cuisines, rating, costForTwo, deliveryTime} = resData;
+    const {name, cuisines, rating, costForTwo, deliveryTime} = resData?.data;
     return(
         <div className="res-card" style={{backgroundColor:"#f0f0f0" }}>
             <img 
