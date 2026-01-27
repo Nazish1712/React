@@ -1,138 +1,138 @@
 const resList = [{
-  data:
+  info:
     {
       "id": "1",
       "name": "Pizza Palace",
       "cuisines": ["Italian", "Pizza"],
       "costForTwo": 400,
-      "deliveryTime": 30,
-      "avgRatings": 4.3
+      sla:{"deliveryTime": 30},
+      "avgRating": 4.3
     }},
-    {data:
+    {info:
     {
       "id": "2",
       "name": "Burger Hub",
       "cuisines": ["Burgers", "Fast Food"],
       "costForTwo": 300,
-      "deliveryTime": 25,
-      "avgRatings": 5
+      sla:{"deliveryTime": 25},
+      "avgRating": 3
     }},
-    {data:
+    {info:
     {
       "id": "3",
       "name": "Spice Villa",
       "cuisines": ["Indian", "North Indian"],
       "costForTwo": 500,
-      "deliveryTime": 35,
-      "avgRatings": 4.4
+      sla:{"deliveryTime": 35},
+      "avgRating": 3.5
     }},
-    {data:
+    {info:
     {
       "id": "4",
       "name": "Chinese Wok",
       "cuisines": ["Chinese", "Asian"],
       "costForTwo": 350,
-      "deliveryTime": 28,
-      "avgRatings": 3.9
+      sla:{"deliveryTime": 28},
+      "avgRating": 3.9
     }},
-    {data:
+    {info:
     {
       "id": "5",
       "name": "South Spice",
       "cuisines": ["South Indian"],
       "costForTwo": 250,
-      "deliveryTime": 20,
-      "avgRatings": 4.5
+      sla:{"deliveryTime": 20},
+      "avgRating": 3.6
     }},
-    {data:
+    {info:
     {
       "id": "6",
       "name": "Tandoori Treats",
       "cuisines": ["North Indian", "Tandoor"],
       "costForTwo": 600,
-      "deliveryTime": 40,
-      "avgRatings": 3.8
+      sla:{"deliveryTime": 40},
+      "avgRating": 3.8
     }},
-    {data:
+    {info:
     {
       "id": "7",
       "name": "Roll Nation",
       "cuisines": ["Rolls", "Fast Food"],
       "costForTwo": 200,
-      "deliveryTime": 18,
-      "avgRatings": 4.0
+      sla:{"deliveryTime": 18},
+      "avgRating": 3.7
     }},
-    {data:
+    {info:
     {
       "id": "8",
       "name": "Biryani House",
       "cuisines": ["Biryani", "Indian"],
       "costForTwo": 450,
-      "deliveryTime": 32,
-      "avgRatings": 3.2
+      sla:{"deliveryTime": 32},
+      "avgRating": 3.2
     }},
-    {data:
+    {info:
     {
       "id": "9",
       "name": "Cafe Brew",
       "cuisines": ["Cafe", "Beverages"],
       "costForTwo": 300,
-      "deliveryTime": 22,
-      "avgRatings": 4.1
+      sla:{"deliveryTime": 22},
+      "avgRating": 3
     }},
-    {data:
+    {info:
     {
       "id": "10",
       "name": "Healthy Bowl",
       "cuisines": ["Healthy", "Salads"],
       "costForTwo": 350,
-      "deliveryTime": 26,
-      "avgRatings": 4.3
+      sla:{"deliveryTime": 26},
+      "avgRating": 4.3
     }},
-    {data:
+    {info:
     {
       "id": "11",
       "name": "Street Foods",
       "cuisines": ["Street Food", "Snacks"],
       "costForTwo": 150,
-      "deliveryTime": 15,
-      "avgRatings": 3.8
+      sla:{"deliveryTime": 15},
+      "avgRating": 3.8
     }},
-    {data:
+    {info:
     {
       "id": "12",
       "name": "Mexican Fiesta",
       "cuisines": ["Mexican"],
       "costForTwo": 500,
-      "deliveryTime": 34,
-      "avgRatings": 5
+      sla:{"deliveryTime": 34},
+      "avgRating": 3.9
     }},
-    {data:
+    {info:
     {
       "id": "13",
       "name": "Sushi World",
       "cuisines": ["Japanese", "Sushi"],
       "costForTwo": 700,
-      "deliveryTime": 45,
-      "avgRatings": 3.5
+      sla:{"deliveryTime": 45},
+      "avgRating": 3.5
     }},
-    {data:
+    {info:
     {
       "id": "14",
       "name": "Dessert Corner",
       "cuisines": ["Desserts", "Bakery"],
       "costForTwo": 250,
-      "deliveryTime": 20,
-      "avgRatings": 4.1
+      sla:{"deliveryTime": 20},
+      "avgRating": 4.1
     }},  
-    {data:  
+    {info:  
     {
       "id": "15",
       "name": "Punjabi Dhaba",
       "cuisines": ["Punjabi", "North Indian"],
       "costForTwo": 550,
-      "deliveryTime": 38,
-      "avgRatings": 3.4
+      sla:{"deliveryTime": 38},
+      "avgRating": 3.4
     }}
   ]
 
