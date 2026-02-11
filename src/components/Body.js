@@ -5,25 +5,40 @@ import Shimmer from "./Shimer"
 const Body = () => {
   
   const [ListOfRestaurants , setListOfRestaurants] = useState([])
+  const [filteredRestaurant,setFilteredRestaurant] = useState([])
     
+  const [searchText, setSearchText] = useState("")
+  
   useEffect(() => {
     fetchData();
   }, [])
 
   const fetchData = async() => {
-    const data = await fetch("https://namastedev.com/api/v1/listRestaurants");
+    const data = await fetch("https://corsproxy.io/?https://namastedev.com/api/v1/listRestaurants");
     
     const json = await data.json()
     
     setListOfRestaurants(json?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    setFilteredRestaurant(json?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   }
   //conditional rendering
-  if(ListOfRestaurants.length === 0){
-    return <Shimmer/>}
+  // if(ListOfRestaurants.length === 0){
+  //   return <Shimmer/>}
 
-  return(
+  return ListOfRestaurants.length === 0 ? (<Shimmer/>) : (
         <div className="body">
             <div className="filter">
+              <div className="search">
+                <input type="text" className="search-box" value={searchText} onChange={(e) => {
+                  setSearchText(e.target.value)
+                }}/>
+                <button
+                onClick={()=>{
+                  const filteredRestaurant = ListOfRestaurants.filter((res)=>{return(res.info.name.toLowerCase().includes(searchText.toLowerCase()))})
+                  setFilteredRestaurant(filteredRestaurant)
+                }}
+                >Search</button>
+              </div>
               <button className="filter-btn"
               onClick={()=>{
                 const filteredList = ListOfRestaurants.filter(
@@ -39,7 +54,7 @@ const Body = () => {
             </div>
             <div className="res-container">
             {
-            ListOfRestaurants.map((restaurant) => {
+            filteredRestaurant.map((restaurant) => {
               return(
                 <RestaurantCard key={restaurant.info.id} resData={restaurant}/>
               )}
