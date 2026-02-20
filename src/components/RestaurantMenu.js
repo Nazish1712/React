@@ -1,14 +1,19 @@
 import { useState , useEffect } from "react"
 import Shimmer from "./Shimer"
+import {useParams} from "react-router-dom"
+import { MENU_API_URL } from "../utils/constants"
+import {MENU_API_URL} from "../utils/constants"
 const RestaurantMenu  = () => {
     const[resInfo , setResInfo]= useState(null)
     
+    const {resId} = useParams()
+
     useEffect(()=>{
        fetchMenu()
     },[])
 
     const fetchMenu = async () =>{
-        const data = await fetch("https://corsproxy.io/?https://namastedev.com/api/v1/listRestaurantMenu/123456")
+        const data = await fetch(MENU_API_URL+resId)
         const json = await data.json()
 
         setResInfo(json.data)
@@ -28,7 +33,7 @@ const RestaurantMenu  = () => {
         <h3>{costForTwoMessage}</h3>
         <ul>
             {itemCards.map((item) => {
-             return <li key={item.card.info.id}>{item.card.info.name}</li>
+             return <li key={item.card.info.id}>{item.card.info.name} - {"Rs."} {item.card.info.price/100}</li>
             })}
         </ul>
     </div>
