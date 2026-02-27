@@ -1,21 +1,10 @@
-import {useState, useEffect} from "react"
 import Shimmer from "./Shimer"
-import {USER_INFO_API} from "../utils/constants"
-
+import useUserInfo from "../utils/useUserInfo"
 
 const User = () => {
-const [userInfo , setUserInfo] = useState(null)
+    
+const userInfo = useUserInfo()
 
-useEffect(()=> {
-    fetchUserInfo()
-}, [])
-
-const fetchUserInfo = async() => {
-    const data = await fetch(USER_INFO_API)
-    const json = await data.json()
-
-    setUserInfo(json)
-}
 if(userInfo === null){
     return <Shimmer/>
 }
