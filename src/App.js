@@ -9,7 +9,6 @@ import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import { createBrowserRouter,  Outlet, RouterProvider} from "react-router-dom";
 
-
 const Grocery = lazy(() => import("./components/Grocery"))
 
 const AppLayout = () => {
