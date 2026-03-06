@@ -3,7 +3,7 @@ const RestaurantCard = (props) =>{
 
     const {name, cloudinaryImageId,  cuisines, avgRating, costForTwo, sla:{deliveryTime}} = resData?.info;
     return(
-        <div className="m-4 p-4 w-[250px] rounded-lg" style={{backgroundColor:"#f0f0f0" }}>
+        <div className="m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-300">
             {<img 
             className="rounded-lg"
             alt="res-logo" 
@@ -16,6 +16,18 @@ const RestaurantCard = (props) =>{
         </div>
     )
 }
+
+//Higher order component
+
+const withVegLabel = (RestaurantCard) => {
+    return() =>{
+        
+    }
+}
+
+
+
+
 
 export default RestaurantCard
 
