@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard"
+import RestaurantCard , {withVegLabel} from "./RestaurantCard"
 import {useState, useEffect} from "react"
 import Shimmer from "./Shimer"
 import { RESTAURANT_LIST_URL } from "../utils/constants"
@@ -11,6 +11,9 @@ const Body = () => {
   const [filteredRestaurant,setFilteredRestaurant] = useState([])
     
   const [searchText, setSearchText] = useState("")
+
+  const RestaurantCardVeg = withVegLabel(RestaurantCard) 
+
   console.log(ListOfRestaurants)
   useEffect(() => {
     fetchData();
@@ -69,7 +72,12 @@ if(onlineStatus === false)
             {
             filteredRestaurant.map((restaurant) => {
               return(
-               <Link key={restaurant.info.id} to={"/restaurants/"+restaurant.info.id}><RestaurantCard  resData={restaurant}/></Link> 
+               <Link key={restaurant.info.id} to={"/restaurants/"+restaurant.info.id}
+               >
+                {restaurant.info.veg ? 
+                (<RestaurantCardVeg resData={restaurant}/> )
+                  :(<RestaurantCard  resData={restaurant}/>)}
+                  </Link> 
               )}
             )
             }
