@@ -88,27 +88,5 @@ if(onlineStatus === false)
 
 export default Body
 
-// const Body = () => {
-// const[ListOfRestaurants , setListofRestaurants] = useState(resList)
 
-//  return(
-//   <div className="body">
-//     <div className="filter">
-//     <button className="filter-btn"
-//     onClick={()=> {
-//       const filteredList = ListOfRestaurants.filter((restaurants) => {return(restaurants.data.avgRatings > 4 )})
-//       setListofRestaurants(filteredList)}
-//     }
-//     >Top Rated Restaurant </button>
-//     </div>
-//     <div className="res-container">
-//        {ListOfRestaurants.map((restaurant) => {
-//         return(
-//           <RestaurantCard key={restaurant.data.id} resData={restaurant}/>
-//         )
-//        })}
-//     </div>
-//   </div>
-//  )
-// }
 

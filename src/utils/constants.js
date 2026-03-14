@@ -5,3 +5,5 @@ export const LOGO_URL = "https://www.logodesign.net/logo-new/burger-with-fries-o
 export const MENU_API_URL = "https://corsproxy.io/?https://namastedev.com/api/v1/listRestaurantMenu/"
 
 export const USER_INFO_API = "https://api.github.com/users/octocat"
+
+export const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"
