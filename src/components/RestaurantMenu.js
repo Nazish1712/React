@@ -2,6 +2,7 @@ import useRestaurantMenu from "../utils/useRestaurantMenu"
 import Shimmer from "./Shimer"
 import {useParams} from "react-router-dom"
 import RestaurantCategory from "./RestaurantCategory"
+import { useState } from "react"
 
 const RestaurantMenu  = () => {
     
@@ -9,6 +10,7 @@ const RestaurantMenu  = () => {
 
     const resInfo = useRestaurantMenu(resId)
 
+    const [showIndex , setShowIndex] = useState(null)
      
      if (resInfo === null) {
         return <Shimmer/>}
@@ -26,7 +28,10 @@ const RestaurantMenu  = () => {
         <p className="font-bold text-lg">{cuisines.join(" , ")} - {costForTwoMessage}</p>
     
         {/**categories accordion */}
-        {categories.map((category) => {return (<RestaurantCategory key={category?.card?.card.title} data={category?.card?.card}/>)})}
+        {categories.map((category , index) => {return (<RestaurantCategory key={category?.card?.card.title} data={category?.card?.card}
+        showItems={index === showIndex ? true : false}
+        setShowIndex={() => setShowIndex(index)}
+        />)})}
         
     </div>
    )
