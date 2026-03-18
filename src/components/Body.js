@@ -14,7 +14,7 @@ const Body = () => {
 
   const RestaurantCardVeg = withVegLabel(RestaurantCard) 
 
-  console.log(ListOfRestaurants)
+  
   useEffect(() => {
     fetchData();
   }, [])
