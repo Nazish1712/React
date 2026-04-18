@@ -9,6 +9,8 @@ import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import { createBrowserRouter,  Outlet, RouterProvider} from "react-router-dom";
 import UserContext from "./utils/UserContext"
+import {Provider} from "react-redux"
+import appStore from "./utils/appStore";
 
 
 const Grocery = lazy(() => import("./components/Grocery"))
@@ -26,15 +28,17 @@ useEffect(() => {
   setUsersName(data.name)
 }, [])
 
-console.log("Provider:", usersName);
+
 
     return(
+      <Provider store={appStore}>
       <UserContext.Provider value={{loggedInUser : usersName}}> 
        <div className="app">
          <Header/>
          <Outlet/>
         </div>
         </UserContext.Provider>
+        </Provider>
     )
 }
 
